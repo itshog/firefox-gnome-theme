@@ -120,8 +120,8 @@ dialog#handling {
 	border-radius: 0px !important;
 	border: 0 !important;
 	padding: 2px 16px !important;
-	height: 34px !important;
-	min-height: 34px !important;
+	height: 24px !important;
+	min-height: 24px !important;
 	color: rgba(255, 255, 255, .9) !important;
 	font-weight: bold !important;
 	transition: background .3s;

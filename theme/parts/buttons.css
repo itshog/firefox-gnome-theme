@@ -46,9 +46,9 @@ button.close,
 	border-radius: 0px !important;
 	border: 0 !important;
 	padding: 0 1px !important;
-	height: 34px !important;
-	max-height: 34px !important;
-	min-height: 34px !important;
+	height: 24px !important;
+	max-height: 24px !important;
+	min-height: 24px !important;
 	min-width: 34px !important;
 	color: var(--gnome-toolbar-color) !important;
 	outline: 0 !important;

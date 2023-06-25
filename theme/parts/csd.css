@@ -134,7 +134,7 @@
 
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 	border-radius: 0px !important;
-	height: 34px;
+	height: 24px;
 	margin: 0 3px !important;
 	width: 34px;
 }
