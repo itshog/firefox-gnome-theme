@@ -1,0 +1,26 @@
+/* Reader view styling */
+@-moz-document url-prefix("about:reader") {
+  body.dark {
+    color: #eeeeee !important;
+    background-color: #1f2021 !important;
+  }
+  a {
+      color: #6a8c64!important;
+      text-decoration: none !important;
+  }
+  body.light {
+    color: #222 !important;
+    background-color: #EEE !important;
+  }
+  body.sepia {
+    color: #5B4636 !important;
+    background-color: #F4ECD8 !important;
+  }
+  body.serif {
+    font-family: serif !important;
+  }
+  body.sans-serif {
+    font-family: sans-serif !important;
+  }
+}
+
