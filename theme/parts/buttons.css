@@ -43,7 +43,7 @@ button.close,
 .unified-extensions-item-menu-button {
 	-moz-appearance: none !important;
 	background: var(--gnome-button-background) !important;
-	border-radius: 6px !important;
+	border-radius: 0px !important;
 	border: 0 !important;
 	padding: 0 1px !important;
 	height: 34px !important;

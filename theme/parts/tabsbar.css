@@ -85,7 +85,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 /* Tabsbar buttons */
 #TabsToolbar .toolbarbutton-1:not(#hack) {
-	border-radius: 6px !important;
+	border-radius: 0px !important;
 	margin: 5px 3px 6px !important;
 	padding: 0 9px !important;
 	min-height: 34px !important;
@@ -178,7 +178,7 @@ tab {
 
 /* Reset tab background */
 .tab-background {
-	border-radius: 6px !important;
+	border-radius: 0px !important;
 	box-shadow: none !important;
 	margin-block: 0 !important;
 	border: 0 !important;

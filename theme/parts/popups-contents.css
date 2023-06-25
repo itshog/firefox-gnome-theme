@@ -240,7 +240,7 @@
 }
 #protections-popup[toast] #protections-popup-mainView-panel-header {
 	border-bottom-width: 1px !important;
-	border-radius: 5px !important;
+	border-radius: 0px !important;
 	padding: 0px !important;
 }
 #protections-popup-info-button {
@@ -251,7 +251,7 @@
 	background-position: center 12px !important;
 	background-color: var(--gnome-entry-background);
 	border: 0 !important;
-	border-radius: 12px;
+	border-radius: 0px;
 	color: var(--gnome-toolbar-color) !important;
 	height: 100% !important;
 	margin: 0 !important;
