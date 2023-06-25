@@ -7,17 +7,17 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		/* Browser area before a page starts loading */
-		--gnome-browser-before-load-background: #242424;
+		--gnome-browser-before-load-background: #1f2021;
 		
 		/* Accent */
-		--gnome-accent-bg: #3584e4;
-		--gnome-accent: #78aeed;
+		--gnome-accent-bg: #6a8c64;
+		--gnome-accent: #6a8c64;
 
 		/* Toolbars */
 		--gnome-toolbar-background: var(--gnome-headerbar-background);
-		--gnome-toolbar-color: #ffffff;
+		--gnome-toolbar-color: #eeeeee;
 		--gnome-toolbar-border-color: rgba(0, 0, 0, .36);
-		--gnome-toolbar-icon-fill: #eeeeec;
+		--gnome-toolbar-icon-fill: #eeeeee;
 		--gnome-inactive-toolbar-color: #919190;
 		--gnome-inactive-toolbar-background: var(--gnome-inactive-headerbar-background);
 		--gnome-inactive-toolbar-border-color: var(--gnome-toolbar-border-color);
@@ -35,7 +35,7 @@
 		--gnome-menu-separator-color: rgba(255, 255, 255, .1);
 
 		/* Header bar */
-		--gnome-headerbar-background: #303030;
+		--gnome-headerbar-background: #1f2021;
 		--gnome-headerbar-border-color: var(--gnome-toolbar-border-color);
 		--gnome-inactive-headerbar-background: var(--gnome-browser-before-load-background);
 		--gnome-inactive-headerbar-border-color: var(--gnome-toolbar-border-color);
@@ -57,15 +57,15 @@
 
 		/* Entries */
 		--gnome-entry-background: rgba(255, 255, 255, .1);
-		--gnome-entry-color: #ffffff;
+		--gnome-entry-color: #eeeeee;
 		--gnome-inactive-entry-color: #d6d6d6;
-		--gnome-focused-urlbar-border-color: rgba(120, 174, 237, .5); /* Same as --gnome-accent but with opacity*/
+		--gnome-focused-urlbar-border-color: #6a8c64; /* Same as --gnome-accent but with opacity*/
 
 		/* Switch */
 		--gnome-switch-background: rgba(255, 255, 255, .15);
 		--gnome-switch-slider-background: #d2d2d2;
 		--gnome-switch-active-background: var(--gnome-accent-bg);
-		--gnome-switch-active-slider-background: #ffffff;
+		--gnome-switch-active-slider-background: #eeeeee;
 
 		/* Tabs */
 		--gnome-tabbar-background: var(--gnome-headerbar-background);
@@ -85,7 +85,7 @@
 
 	/* Private window colors */
 	:root {
-		--gnome-private-accent: #78aeed;
+		--gnome-private-accent: #6a8c64;
 		
 		/* Toolbars */
 		--gnome-private-toolbar-background: var(--gnome-headerbar-background);
