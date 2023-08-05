@@ -34,7 +34,8 @@ menuitem[type="radio"] .menu-iconic-icon {
 menuitem:not(.menuitem-iconic) {
 	padding-right: 18px !important;
 }
-menuitem :is(label, description)[value][crop]::before {
+menuitem :is(label, description)[value][crop]::before,
+.menu-iconic-text[value][crop]::before {
 	min-width: min-content !important;
 }
 menuitem:not([acceltext]) .menu-accel-container {
@@ -294,9 +295,9 @@ panelview > toolbarseparator:not([orient="vertical"]),
 	margin-top: 0 !important;
 }
 
-toolbarbutton menupopup[placespopup] menuseparator {
+menuseparator {
 	padding: 0 !important;
 }
-toolbarbutton menupopup[placespopup] menuseparator::before {
+menuseparator::before {
 	display: none !important;
 }
