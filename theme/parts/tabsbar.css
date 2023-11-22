@@ -118,7 +118,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 /* Tab */
 .tabbrowser-tab {
 	border-width: 0 !important;
-	padding: 0px 2px 6px !important;
+	padding: 5px 2px 6px !important;
 	position: relative;
 }
 .tabbrowser-tab:not([hidden=true], [pinned]):first-of-type {
