@@ -7,7 +7,7 @@
 @media (prefers-color-scheme: dark) {	
 	:root {
 		/* Browser area before a page starts loading */
-		--gnome-browser-before-load-background: #1f2021;
+		--gnome-browser-before-load-background: #1d2021;
 		
 		/* Accent */
 		--gnome-accent-bg: #6a8c64;
@@ -17,7 +17,7 @@
 		--gnome-toolbar-star-button: var(--gnome-palette-yellow-1);
 
 		/* Window */
-		--gnome-window-background: #1f2021;
+		--gnome-window-background: #1d2021;
 		--gnome-window-color: #eeeeee;
 		--gnome-view-background: #1e1e1e;
 		--gnome-sidebar-background: #303030;
@@ -31,7 +31,7 @@
 		--gnome-menu-background: #383838;
 
 		/* Header bar */
-		--gnome-headerbar-background: #1f2021;
+		--gnome-headerbar-background: #1d2021;
 		--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.9);
 
 		/* Toolbars */
@@ -52,7 +52,7 @@
 		/* Text color for Firefox Logo in new private tab */
 		--gnome-private-wordmark: #FBFBFE;
 		/* New private tab background */
-		--gnome-private-in-content-page-background: #1f2021;
+		--gnome-private-in-content-page-background: #1d2021;
 		/* Private browsing info box */
 		--gnome-private-text-primary-color: #FBFBFE;
 	}
@@ -67,7 +67,7 @@
 	:root[privatebrowsingmode="temporary"] {
 		--gnome-accent-fg: #78aeed;
 		/* Headerbar */
-		--gnome-headerbar-background: #1f2021 !important;
+		--gnome-headerbar-background: #1d2021 !important;
 		/* Tabs */	
 		--gnome-tabbar-tab-hover-background: #343e56; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background: #343e56; /* Hardcoded color */
@@ -77,7 +77,7 @@
 
 	/* Private and backdrop colors */
 	:root[privatebrowsingmode="temporary"]:-moz-window-inactive {
-		--gnome-headerbar-background: #1f2021 !important;
+		--gnome-headerbar-background: #1d2021 !important;
 		--gnome-tabbar-tab-hover-background: #242c3f; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background: #272e41; /* Hardcoded color */
 	}

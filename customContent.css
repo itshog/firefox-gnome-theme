@@ -1,13 +1,13 @@
 /* Empty tab background */
 @-moz-document url("about:newtab") {
 	body {
-		background-color: #1f2021 !important;
+		background-color: #1d2021 !important;
 	}
 }
 
 @-moz-document url("about:blank") {
 	body {
-		background-color: #1f2021 !important;
+		background-color: #1d2021 !important;
 	}
 }
 
@@ -15,7 +15,7 @@
 @-moz-document url-prefix("about:reader") {
   body.dark {
     color: #eeeeee !important;
-    background-color: #1f2021 !important;
+    background-color: #1d2021 !important;
   }
   a {
       color: #6a8c64!important;
