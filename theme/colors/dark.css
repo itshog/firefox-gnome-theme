@@ -1,5 +1,7 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+@import "/home/itshog/.config/gtk-4.0/colors/colors.css";
+
 /* Variables that start with --gnome- are added by me and are assigned
  * to elements somewhere in this code. The rest of the variables are
  * built-in in Firefox, so you need to add an !important if you wanna
@@ -7,7 +9,7 @@
 @media (prefers-color-scheme: dark) {	
 	:root {
 		/* Browser area before a page starts loading */
-		--gnome-browser-before-load-background: #1d2021;
+		--gnome-browser-before-load-background: @window_bg_color;
 		
 		/* Accent */
 		--gnome-accent-bg: #6a8c64;
@@ -17,10 +19,10 @@
 		--gnome-toolbar-star-button: var(--gnome-palette-yellow-1);
 
 		/* Window */
-		--gnome-window-background: #1d2021;
-		--gnome-window-color: #eeeeee;
+		--gnome-window-background: @window_bg_color;
+		--gnome-window-color: @window_fg_color !important;
 		--gnome-view-background: #1e1e1e;
-		--gnome-sidebar-background: #303030;
+		--gnome-sidebar-background: @card_bg_color;
 		--gnome-secondary-sidebar-background: #2a2a2a;
 
 		/* Card */
@@ -28,14 +30,14 @@
 		--gnome-card-shade-color: color-mix(in srgb, black 36%, transparent);
 
 		/* Menu */
-		--gnome-menu-background: #383838;
+		--gnome-menu-background: #303030;
 
 		/* Header bar */
-		--gnome-headerbar-background: #1d2021;
+		--gnome-headerbar-background: @window_bg_color;
 		--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.9);
 
 		/* Toolbars */
-		--gnome-toolbar-icon-fill: #cdcdcd;
+		--gnome-toolbar-icon-fill: @window_fg_color !important;
 
 		/* Tabs */
 		--gnome-tabbar-tab-hover-background: #3f3f3f; /* Hardcoded color */
@@ -50,11 +52,11 @@
 		--gnome-tabbar-identity-color-purple: var(--gnome-palette-purple-1);
 		
 		/* Text color for Firefox Logo in new private tab */
-		--gnome-private-wordmark: #FBFBFE;
+		--gnome-private-wordmark: @window_fg_color !important;
 		/* New private tab background */
-		--gnome-private-in-content-page-background: #1d2021;
+		--gnome-private-in-content-page-background: @window_bg_color;
 		/* Private browsing info box */
-		--gnome-private-text-primary-color: #FBFBFE;
+		--gnome-private-text-primary-color: @window_fg_color !important;
 	}
 
 	/* Backdrop colors */
@@ -67,7 +69,7 @@
 	:root[privatebrowsingmode="temporary"] {
 		--gnome-accent-fg: #78aeed;
 		/* Headerbar */
-		--gnome-headerbar-background: #1d2021 !important;
+		--gnome-headerbar-background: @window_bg_color !important;
 		/* Tabs */	
 		--gnome-tabbar-tab-hover-background: #343e56; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background: #343e56; /* Hardcoded color */
@@ -77,7 +79,7 @@
 
 	/* Private and backdrop colors */
 	:root[privatebrowsingmode="temporary"]:-moz-window-inactive {
-		--gnome-headerbar-background: #1d2021 !important;
+		--gnome-headerbar-background: @window_bg_color !important;
 		--gnome-tabbar-tab-hover-background: #242c3f; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background: #272e41; /* Hardcoded color */
 	}

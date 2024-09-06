@@ -61,9 +61,9 @@
 	--gnome-toolbar-star-button: var(--gnome-palette-yellow-5);
 	
 	/* Window */
-	--gnome-window-background: #f2e5bc;
-	--gnome-window-color: #514036;
-	--gnome-view-background: #f2e5bc;
+	--gnome-window-background: @window_bg_color;
+	--gnome-window-color: @window_fg_color;
+	--gnome-view-background: @window_bg_color;
 	--gnome-view-color: var(--gnome-window-color);
 	--gnome-view-selected-background: color-mix(in srgb, var(--gnome-accent-bg) 25%, transparent);
 	--gnome-view-selected-hover-background: color-mix(in srgb, var(--gnome-accent-bg) 32%, transparent);
@@ -72,7 +72,7 @@
 	--gnome-secondary-sidebar-background: #d5c4a1;
 	
 	/* Card */
-	--gnome-card-background: #f2e5bc;
+	--gnome-card-background: @window_bg_color;
 	--gnome-card-shade-color: color-mix(in srgb, black 7%, transparent);
 	
 	/* Menu */
@@ -84,13 +84,13 @@
 	--gnome-menu-separator-color: var(--gnome-border-color);
 	
 	/* Header bar */
-	--gnome-headerbar-background: #f2e5bc;
+	--gnome-headerbar-background: @window_bg_color;
 	--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.12);
 
 	/* Toolbars */
 	--gnome-toolbar-background: var(--gnome-headerbar-background);
 	--gnome-toolbar-border-color: var(--gnome-headerbar-shade-color);
-	--gnome-toolbar-icon-fill: #514036;
+	--gnome-toolbar-icon-fill: @window_fg_color;
 	
 	/* Elements */
 	--gnome-border-color: color-mix(in srgb, currentColor 15%, transparent);
@@ -136,7 +136,7 @@
 	/* Text color for Firefox Logo in new private tab */
 	--gnome-private-wordmark: #20123A;
 	/* New private tab background */
-	--gnome-private-in-content-page-background: #f2e5bc;
+	--gnome-private-in-content-page-background: @window_bg_color;
 	/* Private browsing info box */
 	--gnome-private-text-primary-color: #15141A;
 }

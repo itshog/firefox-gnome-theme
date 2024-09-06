@@ -85,7 +85,7 @@
 }
 
 #urlbar[focused] {
-	background: #1d2021 !important;
+	background: var(--gnome-headerbar-background) !important;
         z-index: 2;
 	min-width: 50vw !important;
 }
