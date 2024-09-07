@@ -1,0 +1,39 @@
+/* Empty tab background */
+@-moz-document url("about:newtab") {
+    body {
+        background-color: #272e33 !important;
+    }
+}
+
+@-moz-document url("about:blank") {
+    body {
+        background-color: #272e33 !important;
+    }
+}
+
+/* Reader view styling */
+@-moz-document url-prefix("about:reader") {
+    body.dark {
+        color: #eeeeee !important;
+        background-color: @window_bg_color !important;
+    }
+    a {
+        color: #6a8c64!important;
+        text-decoration: none !important;
+    }
+    body.light {
+        color: #222 !important;
+        background-color: #EEE !important;
+    }
+    body.sepia {
+        color: #5B4636 !important;
+        background-color: #F4ECD8 !important;
+    }
+    body.serif {
+        font-family: serif !important;
+    }
+    body.sans-serif {
+        font-family: sans-serif !important;
+    }
+}
+
