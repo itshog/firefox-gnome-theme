@@ -28,14 +28,15 @@ toolbarspring {
 }
 
 #urlbar[breakout][breakout-extend] {
-	left: 0 !important;
-	top: 0 !important;
-	width: 100% !important;
-	z-index: 5 !important;
+	width: var(--urlbar-width) !important;
 }
 
 #urlbar .urlbar-input-container {
 	padding: 0 !important;
+}
+
+.urlbar-input::placeholder, .searchbar-textbox::placeholder {
+	opacity: 0.85 !important;
 }
 
 /* URL bar results */
@@ -43,10 +44,10 @@ toolbarspring {
 	background: transparent !important;
 	color: var(--gnome-window-color) !important;
 	margin: 11px 0 0 -3px !important;
-	width: 100% !important;
     position: absolute !important;
     box-shadow: var(--gnome-menu-shadow) !important;
     border-radius: 0px !important;
+	width: 100%;
 }
 
 /* Search bar result */
@@ -113,7 +114,7 @@ toolbarspring {
 }
 
 .search-one-offs[is_searchbar="true"] {
-  margin-bottom: -8px !important;
+	margin-bottom: -8px !important;
 }
 
 /* URL bar and Search bar */
@@ -193,13 +194,13 @@ toolbarspring {
 #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button,
 #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button,
 #urlbar-label-box {
-  background-color: transparent !important;
+	background-color: transparent !important;
 }
 
 #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:not([open]),
 #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:hover:not([open]),
 #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:not([open]) {
-  background-color: hsla(0,0%,70%,.2) !important;
+	background-color: hsla(0,0%,70%,.2) !important;
 }
 
 #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:active,
@@ -208,5 +209,11 @@ toolbarspring {
 #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button[open=true],
 #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:active,
 #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button[open=true] {
-  background-color: hsla(0,0%,70%,.3) !important;
+	background-color: hsla(0,0%,70%,.3) !important;
+}
+
+@media (-moz-bool-pref: "browser.urlbar.richSuggestions.featureGate") {
+	#identity-box[pageproxystate="invalid"] > .identity-box-button {
+		padding-inline:  var(--urlbar-icon-padding) !important;
+	}
 }

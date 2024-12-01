@@ -9,11 +9,9 @@
 		/* Browser area before a page starts loading */
 		--gnome-browser-before-load-background: #1f2021;
 		
-		/* Accent */
-		--gnome-accent-bg: #6a8c64;
-		--gnome-accent: #6a8c64;
-		--gnome-selection-bg: #6a8c64;
-
+		/* Colors */
+		--gnome-standalone-color-oklab: max(l, 0.85) a b;
+		--gnome-destructive-bg: var(--gnome-palette-red-4);
 		--gnome-toolbar-star-button: var(--gnome-palette-yellow-1);
 
 		/* Window */
