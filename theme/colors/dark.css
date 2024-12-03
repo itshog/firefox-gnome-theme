@@ -16,7 +16,7 @@
 
 		/* Window */
 		--gnome-window-background: #1f2021;
-		--gnome-window-color: #eeeeee;
+		--gnome-window-color: #d4be98;
 		--gnome-view-background: #1e1e1e;
 		--gnome-sidebar-background: #303030;
 		--gnome-secondary-sidebar-background: #2a2a2a;
@@ -33,7 +33,7 @@
 		--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.9);
 
 		/* Toolbars */
-		--gnome-toolbar-icon-fill: #cdcdcd;
+		--gnome-toolbar-icon-fill: #d4be98;
 
 		/* Tabs */
 		--gnome-tabbar-tab-hover-background: #3f3f3f; /* Hardcoded color */
