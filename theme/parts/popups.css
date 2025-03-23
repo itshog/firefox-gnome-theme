@@ -6,7 +6,7 @@
 menupopup {
 	appearance: none !important;	
 	color: var(--gnome-window-color) !important;
-	padding: 8px !important;
+	padding: var(--gnome-menu-padding) !important;
 }
 
 menucaption {
@@ -14,7 +14,7 @@ menucaption {
 }
 
 menu menupopup {
-	margin:	-14px -8px 0px 0px !important;
+	margin:	-16px 0 0 0 !important;
 }
 
 menulist {
@@ -27,17 +27,22 @@ menulist {
 	border: 1px solid var(--gnome-menu-border-color) !important;
 	border-radius: 0px !important;
 	box-shadow: var(--gnome-menu-shadow) !important;
-	padding: 6px !important;
-	margin: 0 !important;
-	min-height: 60px !important;
+	padding: var(--gnome-menu-padding) !important;
+	min-height: 45px !important;
 }
-
 menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
 menuitem[type="radio"] .menu-iconic-icon {
 	appearance: none !important;
 }
 menuitem {
 	padding-inline-end: 18px !important;
+}
+menu, menuitem {
+	margin-inline: 0 !important;
+	&:where([_moz-menuactive]:not([disabled="true"])) {
+		color: currentColor;
+		background-color: transparent !important;
+	}
 }
 menuitem:not([acceltext]) .menu-accel-container {
 	visibility: collapse !important;
@@ -55,19 +60,19 @@ menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 
 /* Adjust popovers position */
 panel[type=arrow] {
-	margin-top: 8px !important;
+	margin-top: var(--gnome-menu-padding) !important;
 }
 
 /* Style popovers */
 panel:not([remote]) {
 	--arrowpanel-background: var(--gnome-menu-background) !important;
+	--arrowpanel-color: var(--gnome-menu-color) !important;
 	--panel-item-hover-bgcolor: var(--gnome-selected-background) !important;
 }
 panel  {
 	--arrowpanel-padding: 0 !important;
 	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
 	--arrowpanel-border-radius: 0px !important;
-	--gnome-menu-padding: 6px;
 }
 
 /* Padding rules */
@@ -185,7 +190,6 @@ panelview .unified-extensions-item-action-button,
 .protections-popup-footer-button,
 .protections-popup-category,
 .identity-popup-content-blocking-category,
-#PlacesToolbar .bookmark-item,
 #downloadsPanel-mainView .download-state {
 	-moz-appearance: none !important;
 	border-radius: 0px !important;	
@@ -193,12 +197,15 @@ panelview .unified-extensions-item-action-button,
 	font: menu !important;
 	padding: 4px 12px !important;
 	min-height: 32px !important;
+	
+	&:hover {
+		background: var(--gnome-selected-color) !important;
+	}
 }
 .subviewbutton,
 .protections-popup-footer-button,
 .protections-popup-category,
 .identity-popup-content-blocking-category,
-#PlacesToolbar menupopup[placespopup="true"] .bookmark-item,
 .openintabs-menuitem,
 .widget-overflow-list .toolbarbutton-1,
 panelview .unified-extensions-item {
@@ -207,7 +214,7 @@ panelview .unified-extensions-item {
 
 .subviewbutton[shortcut]:after {
  	opacity: 0.5 !important;
-  color: var(--gnome-menu-color) !important;
+	color: var(--gnome-menu-color) !important;
 }
 
 .bookmark-item .menu-right {
@@ -223,20 +230,6 @@ menuitem[disabled="true"], menupopup menu[disabled="true"],
 }
 menuitem[disabled="true"][_moz-menuactive], menupopup menu[disabled="true"][_moz-menuactive] {
 	background: transparent !important;
-}
-
-/* Menu buttons hover */
-menuitem:not([disabled="true"]):is(:hover, [_moz-menuactive]),
-menupopup menu:not([disabled="true"]):is(:hover, [_moz-menuactive]),
-panelview .toolbarbutton-1:hover,
-.subviewbutton:not([disabled="true"], #appMenu-zoom-controls2, #appMenu-fxa-label2):hover,
-.protections-popup-footer-button:not([disabled="true"]):hover,
-#protections-popup-show-report-stack:hover .protections-popup-footer-button,
-.protections-popup-category:not([disabled="true"]):hover,
-.identity-popup-content-blocking-category:not([disabled="true"]):hover,
-#PlacesToolbar .bookmark-item:is(:hover, [open], [_moz-menuactive]),
-#downloadsPanel-mainView .download-state:hover {
-	background: var(--gnome-selected-color) !important;
 }
 
 /* Menu buttons fix */
