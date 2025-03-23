@@ -8,7 +8,7 @@ input[type="checkbox"],
 checkbox:not(.treenode-checkbox) > .checkbox-check {
 	appearance: none !important;
 	border: 0 !important;
-	border-radius: 6px !important;
+	border-radius: 0px !important;
 	color: var(--gnome-window-color) !important;
 	height: 20px !important;
 	width: 20px !important;

@@ -562,7 +562,7 @@ tab-group {
 		
 		.tab-group-label {
 			align-items: center !important;
-			border-radius: 26px !important;
+			border-radius: 0px !important;
 			display: flex;
 			margin-block: var(--gnome-toolbar-padding) !important;
 			padding: 2px 9px !important;
@@ -592,7 +592,7 @@ tab-group {
 
 /* Tabs group label */
 .tab-group-label {
-	border-radius: 26px !important;
+	border-radius: 0px !important;
 
 	tab-group[collapsed] & {
 		@media (prefers-color-scheme: dark) {

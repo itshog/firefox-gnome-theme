@@ -1,16 +1,16 @@
 :root {
 	--gnome-toolbar-padding: 6px;
 	--gnome-toolbar-spacing: 6px;
-	--gnome-button-radius: 6px;
+	--gnome-button-radius: 0px;
 	--gnome-button-size: 34px;
 	--gnome-entry-radius: var(--gnome-button-radius);
 	--gnome-entry-height: var(--gnome-button-size);
-	--gnome-card-radius: calc(var(--gnome-button-radius) + 6px);
-	--gnome-menu-radius: 6px;
+	--gnome-card-radius: calc(var(--gnome-button-radius) + 0px);
+	--gnome-menu-radius: 0px;
 	--gnome-menu-padding: 6px;
 	--gnome-menu-item-padding: 12px;
-	--gnome-popover-radius: calc(var(--gnome-button-radius) + 6px);
-	--gnome-dialog-radius: 18px; /* Alert dialog */
+	--gnome-popover-radius: calc(var(--gnome-button-radius) + 0px);
+	--gnome-dialog-radius: 0px; /* Alert dialog */
 	--gnome-dialog-padding: 24px;
 	
 	/* Animations */
