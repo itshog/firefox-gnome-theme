@@ -1,15 +1,21 @@
 /* Empty tab background */
-@-moz-document url("about:newtab") {
+@-moz-document url("about:home"),url("about:blank"),url("about:newtab"),url("about:privatebrowsing") {
 	body {
 		background-color: #1f2021 !important;
 	}
 }
-
-@-moz-document url("about:blank") {
-	body {
-		background-color: #1f2021 !important;
-	}
-}
+/**/
+/* @-moz-document url("about:blank") { */
+/* 	body { */
+/* 		background-color: #1f2021 !important; */
+/* 	} */
+/* } */
+/**/
+/* @-moz-document url("about:home") { */
+/* 	body { */
+/* 		background-color: #1f2021 !important; */
+/* 	} */
+/* } */
 
 /* Reader view styling */
 @-moz-document url-prefix("about:reader") {
