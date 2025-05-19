@@ -22,15 +22,15 @@
 		--gnome-window-background: #1f2021;
 		--gnome-window-color: #d4be98;
 		--gnome-view-background: #1e1e1e;
-		--gnome-sidebar-background: #303030;
-		--gnome-secondary-sidebar-background: #2a2a2a;
+		--gnome-sidebar-background: #2e2e32;
+		--gnome-secondary-sidebar-background: #28282c;
 
 		/* Card */
 		--gnome-card-background: rgba(255, 255, 255, 0.08);
-		--gnome-card-shade-color: color-mix(in srgb, black 36%, transparent);
+		--gnome-card-shade-color: rgba(0, 0, 6, 0.36);
 
 		/* Menu */
-		--gnome-menu-background: #383838;
+		--gnome-menu-background: #36363a;
 
 		/* Header bar */
 		--gnome-headerbar-background: #1f2021;
@@ -40,10 +40,10 @@
 		--gnome-toolbar-icon-fill: #d4be98;
 
 		/* Tabs */
-		--gnome-tabbar-tab-hover-background: #3f3f3f; /* Hardcoded color */
-		--gnome-tabbar-tab-active-background: #444444; /* Hardcoded color */
+		--gnome-tabbar-tab-hover-background: #3d3d40; /* Hardcoded color */
+		--gnome-tabbar-tab-active-background: #434346; /* Hardcoded color */
 		--gnome-tabbar-tab-active-background-contrast: #4F4F4F; /* Hardcoded color */
-		--gnome-tabbar-tab-active-hover-background: #4b4b4b; /* Hardcoded color */
+		--gnome-tabbar-tab-active-hover-background: #49494d; /* Hardcoded color */
 		
 		--gnome-tabbar-identity-color-green: var(--gnome-palette-green-1);
 		--gnome-tabbar-identity-color-yellow: var(--gnome-palette-yellow-2);
@@ -52,7 +52,7 @@
 		--gnome-tabbar-identity-color-purple: var(--gnome-palette-purple-1);
 		
 		/* Miscellaneous */
-		--gnome-shade-color: rgba(0, 0, 0, 0.25);
+		--gnome-shade-color: rgba(0, 0, 6, 0.25);
 		
 		/* Text color for Firefox Logo in new private tab */
 		--gnome-private-wordmark: #FBFBFE;
@@ -63,10 +63,10 @@
 		
 		/* Backdrop colors */
 		&:-moz-window-inactive {
-			--gnome-tabbar-tab-hover-background: #2c2c2c; /* Hardcoded color */
-			--gnome-tabbar-tab-active-background: #2e2e2e; /* Hardcoded color */
-			--gnome-sidebar-background: #2a2a2a;
-			--gnome-secondary-sidebar-background: #272727;
+			--gnome-tabbar-tab-hover-background: #2a2a2e; /* Hardcoded color */
+			--gnome-tabbar-tab-active-background: #2d2d31; /* Hardcoded color */
+			--gnome-sidebar-background: #28282c;
+			--gnome-secondary-sidebar-background: #252529;
 		}
 		
 		/* Private browsing colors */
