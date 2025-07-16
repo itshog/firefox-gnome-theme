@@ -2,6 +2,15 @@
   display: none;
 }
 
+.tab-background {
+    border-radius: 0 !important;
+}
+
+#tabs-newtab-button {
+    border-radius: 0 !important;
+}
+
+
 /* #navigator-toolbox { 
   border-bottom: 0px !important;
 } */
