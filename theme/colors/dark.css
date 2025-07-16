@@ -7,7 +7,7 @@
 @media (prefers-color-scheme: dark) {	
 	:root {
 		/* Browser area before a page starts loading */
-		--gnome-browser-before-load-background: #1f2021;
+		--gnome-browser-before-load-background: #1d2021;
 		
 		/* Colors */
 		--gnome-standalone-color-oklab: max(l, 0.85) a b;
@@ -19,10 +19,10 @@
 		--gnome-toolbar-star-button: var(--gnome-palette-yellow-1);
 
 		/* Window */
-		--gnome-window-background: #1f2021;
+		--gnome-window-background: #1d2021;
 		--gnome-window-color: #d4be98;
 		--gnome-view-background: #1e1e1e;
-		--gnome-sidebar-background: #2e2e32;
+		--gnome-sidebar-background: #1d2021;
 		--gnome-secondary-sidebar-background: #28282c;
 
 		/* Card */
@@ -33,7 +33,7 @@
 		--gnome-menu-background: #282b2c;
 
 		/* Header bar */
-		--gnome-headerbar-background: #1f2021;
+		--gnome-headerbar-background: #1d2021;
 		--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.9);
 
 		/* Toolbars */
@@ -57,7 +57,7 @@
 		/* Text color for Firefox Logo in new private tab */
 		--gnome-private-wordmark: #FBFBFE;
 		/* New private tab background */
-		--gnome-private-in-content-page-background: #1f2021;
+		--gnome-private-in-content-page-background: #1d2021;
 		/* Private browsing info box */
 		--gnome-private-text-primary-color: #FBFBFE;
 		
