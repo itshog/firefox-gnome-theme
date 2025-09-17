@@ -21,34 +21,6 @@
 
 /* Use system theme icons instead of Adwaita icons included by theme */
 :root {
-	--gnome-icon-application-x-addon-symbolic: url("moz-icon://stock/application-x-addon-symbolic") !important;
-	--gnome-icon-applications-engineering-symbolic: url("moz-icon://stock/applications-engineering-symbolic") !important;
-	--gnome-icon-edit-copy-symbolic: url("moz-icon://stock/edit-copy-symbolic") !important;
-	--gnome-icon-edit-cut-symbolic: url("moz-icon://stock/edit-cut-symbolic") !important;
-	--gnome-icon-edit-find-symbolic: url("moz-icon://stock/edit-find-symbolic") !important;
-	--gnome-icon-edit-paste-symbolic: url("moz-icon://stock/edit-paste-symbolic") !important;
-	--gnome-icon-folder-download-symbolic: url("moz-icon://stock/folder-download-symbolic") !important;
-	--gnome-icon-go-next-symbolic: url("moz-icon://stock/go-next-symbolic") !important;
-	--gnome-icon-go-previous-symbolic: url("moz-icon://stock/go-previous-symbolic") !important;
-	--gnome-icon-mail-unread-symbolic: url("moz-icon://stock/mail-unread-symbolic") !important;
-	--gnome-icon-open-menu-symbolic: url("moz-icon://stock/open-menu-symbolic") !important;
-	--gnome-icon-pan-down-symbolic: url("moz-icon://stock/pan-down-symbolic") !important;
-	--gnome-icon-pan-down-symbolic: url("moz-icon://stock/pan-down-symbolic") !important;
-	--gnome-icon-preferences-system-symbolic: url("moz-icon://stock/preferences-system-symbolic") !important;
-	--gnome-icon-preferences-system-time-symbolic: url("moz-icon://stock/preferences-system-time-symbolic") !important;
-	--gnome-icon-printer-symbolic: url("moz-icon://stock/printer-symbolic") !important;
-	--gnome-icon-process-stop-symbolic: url("moz-icon://stock/process-stop-symbolic") !important;
-	--gnome-icon-starred-symbolic: url("moz-icon://stock/starred-symbolic") !important;
-	--gnome-icon-tab-new-symbolic: url("moz-icon://stock/tab-new-symbolic") !important;
-	--gnome-icon-user-home-symbolic: url("moz-icon://stock/user-home-symbolic") !important;
-	--gnome-icon-view-fullscreen-symbolic: url("moz-icon://stock/view-fullscreen-symbolic") !important;
-	--gnome-icon-view-refresh-symbolic: url("moz-icon://stock/view-refresh-symbolic") !important;
-	--gnome-icon-view-restore-symbolic: url("moz-icon://stock/view-restore-symbolic") !important;
-	--gnome-icon-window-close-symbolic: url("moz-icon://stock/window-close-symbolic") !important;
-	--gnome-icon-window-maximize-symbolic: url("moz-icon://stock/window-maximize-symbolic") !important;
-	--gnome-icon-window-minimize-symbolic: url("moz-icon://stock/window-minimize-symbolic") !important;
-	--gnome-icon-window-new-symbolic: url("moz-icon://stock/window-new-symbolic") !important;
-	--gnome-icon-window-restore-symbolic: url("moz-icon://stock/window-restore-symbolic") !important;
-	--gnome-icon-zoom-in-symbolic: url("moz-icon://stock/zoom-in-symbolic") !important;
-	--gnome-icon-zoom-out-symbolic: url("moz-icon://stock/zoom-out-symbolic") !important;
+        --gnome-accent: #6a8c64 !important;
+        --gnome-accent-bg: #6a8c64 !important;
 }
