@@ -14,6 +14,13 @@
     border-radius: 0 !important;
 }
 
+#sidebar-main {
+    color: var(--gnome-window-color) !important;
+}
+
+/* #tabbrowser-tabs[orient="vertical"] { */
+/*     background-color: var(--gnome-window-background) !important; */
+/* } */
 
 /* #navigator-toolbox { 
   border-bottom: 0px !important;
