@@ -1,5 +1,5 @@
 #tracking-protection-icon-container {
-  display: none;
+    display: none;
 }
 
 .tab-background {
@@ -16,18 +16,15 @@
 
 #sidebar-main {
     color: var(--gnome-window-color) !important;
+    background-image: none !important;
 }
 
-/* #tabbrowser-tabs[orient="vertical"] { */
-/*     background-color: var(--gnome-window-background) !important; */
-/* } */
+#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+#urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
+    outline-color: color-mix(in srgb, var(--gnome-accent) 25%, transparent) !important;
+}
 
-/* #navigator-toolbox { 
-  border-bottom: 0px !important;
-} */
-
-/* Use system theme icons instead of Adwaita icons included by theme */
 :root {
-        --gnome-accent: #6a8c64 !important;
-        --gnome-accent-bg: #6a8c64 !important;
+    --gnome-accent: #6a8c64 !important;
+    --gnome-accent-bg: #6a8c64 !important;
 }
