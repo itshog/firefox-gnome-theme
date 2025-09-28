@@ -82,7 +82,7 @@ radio > .radio-check[selected] {
 .toggle-button {
 	--toggle-height: 26px !important;
 	--toggle-width: 48px !important;
-	--toggle-border-radius: 24px !important;
+	--toggle-border-radius: 0px !important;
 	--toggle-border-color: var(--gnome-trough-background) !important;
 	--toggle-background-color:  var(--gnome-trough-background) !important;
 	--toggle-background-color-pressed: var(--gnome-accent-bg) !important;
