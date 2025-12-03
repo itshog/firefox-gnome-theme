@@ -85,8 +85,10 @@
 
 		#tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button,
 		#vertical-tabs-newtab-button {
-			margin-block: calc(var(--gnome-toolbar-padding) / 2) !important;
+			margin-inline: var(--gnome-toolbar-padding) !important;
+			margin-block: calc(var(--gnome-toolbar-spacing) / 2) !important;
 		}
+		
 	}
 }
 
@@ -346,6 +348,14 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 				}
 		}
 	}
+	
+	#tabbrowser-tabs:not([expanded]) & {
+		#pinned-tabs-container[orient="vertical"] & {
+			@media not -moz-pref("sidebar.expandOnHover") {
+				justify-content: unset !important;
+			}
+		}
+	}
 }
 
 /* Tab label */
@@ -467,7 +477,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 	#tabbrowser-tabs[orient="horizontal"] & {
 		&:not([pinned]) {
-			margin-inline-start: auto !important;
+			margin-inline-start: auto;
 			margin-inline-end: 2px;
 
 			@media -moz-pref("gnomeTheme.tabAlignLeft") {
@@ -487,11 +497,10 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 		.tab-icon-image {
 			transition: opacity var(--gnome-animation-time) ease-out !important;
-		}		
-	}
-	
-	&::before {
-		margin: 4px;
+		}	
+		&::before {
+			margin: 4px;
+		}
 	}
 }
 
@@ -554,6 +563,8 @@ tab-group {
 }
 
 .tab-group-label-container {
+	padding-bottom: var(--gnome-toolbar-padding);
+	
 	#tabbrowser-tabs[orient="vertical"][expanded] & {
 		margin-block: 0 !important;
 		margin-inline-start: calc(var(--tab-group-line-thickness) * -1);
@@ -757,7 +768,7 @@ tab-group {
 
 /* OPTIONAL: Hide single tab */
 @media -moz-pref("gnomeTheme.hideSingleTab") and (not -moz-pref("sidebar.verticalTabs")) {
-	#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
+	#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) {
 		:is(tab, tab ~ toolbarbutton, tab ~ #tabbrowser-arrowscrollbox-periphery) {
 			visibility: collapse;
 		}
@@ -865,27 +876,27 @@ tab-group {
 
 	/* Blend single tab into whole bar */
 	@media -moz-pref("gnomeTheme.hideSingleTab") {
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) :is(
 			tab,
 			tab ~ toolbarbutton,
 			tab ~ #tabbrowser-arrowscrollbox-periphery
 		) {
 			visibility: visible;
 		}
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) tab {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) tab {
 			-moz-window-dragging: drag !important;
 		}
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-background {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-background {
 			display: none !important
 		}
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-close-button {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-close-button {
 			visibility: hidden !important;
 			opacity: 0 !important;
 		}
-		#tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-content::before {
+		#tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-content::before {
 			--gnome-tabbar-tab-close-overlay-bg: unset !important;
 		}
-		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-label-container[textoverflow="true"] {
+		:root[dir="ltr"] #tabbrowser-tabs:not(:has(tab[pinned]:not([hidden="true"]))):not(:has(tab:not([hidden="true"]) ~ tab:not([hidden="true"]))) .tab-label-container[textoverflow="true"] {
 			margin-inline-end: -16px;
 		}
 	}
