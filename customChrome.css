@@ -10,6 +10,15 @@
     border-radius: 0 !important;
 }
 
+/* tab label */
+/* #TabsToolbar .tabbrowser-tab:is([selected],[multiselected]) label { */
+/*     color: black   !important; */
+/* } */
+
+.tabbrowser-tab label {
+    color: #d4be98 !important;
+}
+
 #tabs-newtab-button {
     border-radius: 0 !important;
 }
