@@ -3,55 +3,8 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Icons color */
-.toolbarbutton-icon:not([class*="identity-color-"] .toolbarbutton-icon),
-link[href="chrome://global/content/elements/moz-button.css"] + button[type~="icon"],
-menuitem:not([class*='identity']) .menu-icon,
-#vertical-tabs-newtab-button .toolbarbutton-icon,
-.urlbar-page-action:not([readeractive]),
-.urlbar-icon,
-#blocked-permissions-container > .blocked-permission-icon,
-.button-icon:not(#hack),
-.bookmark-item[container],
-.notification-anchor-icon,
-.protections-popup-category::after,
-.protections-popup-footer-icon,
-#identity-popup-mainView .subviewbutton-nav::after,
-.widget-overflow-list .subviewbutton-nav::after,
-.PanelUI-subView .subviewbutton-nav::after,
-#identity-popup[connection^="secure"] .identity-popup-security-connection,
-.panel-info-button > image,
-.menu-right,
-.expander-down > .button-box,
-#sidebar-switcher-arrow,
-#sidebar-icon,
-#viewButton .button-menu-dropmarker,
-.menulist-label-box:after,
-.expander-up > .button-box,
-#urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] > #identity-icon,
-.searchbar-search-icon,
-.textbox-search-sign,
-treechildren::-moz-tree-twisty,
-treechildren::-moz-tree-image,
-.item.client .item-twisty-container,
-menuitem[type="checkbox"],
-menuitem[type="checkbox"][checked="true"],
-menuitem[type="radio"],
-menuitem[type="radio"][checked="true"],
-.tab-icon-overlay,
-.tab-icon-stack::before,
-.close-icon:not(.tab-close-button),
-button.close::before,
-#urlbar-search-mode-indicator-close,
-#tracking-protection-icon,
-#identity-icon,
-#permissions-granted-icon,
-#downloads-indicator-icon,
-.textbox-search-clear,
-.urlbarView-type-icon,
-radio > .radio-check,
-link[href="chrome://global/skin/dropmarker.css"] + image,
 :root[customtitlebar] .titlebar-buttonbox .titlebar-button  .toolbarbutton-icon {
-	fill: var(--gnome-toolbar-icon-fill) !important;
+	fill: currentColor !important;
 	-moz-context-properties: fill;
 }
 .urlbar-icon:-moz-window-inactive,
@@ -244,30 +197,32 @@ button.close::before {
 		list-style-image: var(--gnome-icon-preferences-system-time-symbolic) !important;
 	}
 
-	/* Menu checkbox */
-	menuitem[type="checkbox"] {
-		list-style-image: none !important;
+	/* Menu checkbox/radio */
+	menuitem[type="checkbox"], menuitem[type="radio"] {
+		&::before {
+			align-items: center;
+			content: "";
+			display: flex;
+			height: 16px;
+			justify-content: center;
+			margin-inline-end: 0.5em;
+			width: 16px;
+		}
+		&[disabled="true"]::before {
+			opacity: 0.5;
+		}
+	}	
+	menuitem[type="checkbox"][checked]::before {
+		content: var(--gnome-icon-select-symbolic);
 	}
-	menuitem[type="checkbox"][checked="true"] {
-		list-style-image: var(--gnome-icon-select-symbolic) !important;
-	}
-	menuitem[type="checkbox"][disabled="true"] .menu-icon {
-		opacity: 0.5;
-	}
-
-	/* Menu radio */
 	menuitem[type="radio"] {
-		list-style-image: none !important;
-	}
-	menuitem[type="radio"][checked="true"] {
-		list-style-image: var(--gnome-icon-bullet-symbolic) !important;
-	}
-	menuitem[type="radio"] .menu-icon {
-		border-radius: 100%;
-		border: 1px solid var(--gnome-toolbar-icon-fill);
-	}
-	menuitem[type="radio"][disabled="true"] .menu-icon {
-		opacity: 0.5;
+		&::before {
+			border-radius: 100%;
+			border: 1px solid var(--gnome-toolbar-icon-fill);
+		}
+		&[checked]::before {
+			content: var(--gnome-icon-bullet-symbolic);
+		}
 	}
 
 	/* Dropmarker */
@@ -278,12 +233,13 @@ button.close::before {
 	/* Close button */
 	.close-icon:not(.tab-close-button),
 	.identity-popup-permission-remove-button .button-icon,
-	.permission-popup-permission-remove-button > .button-box > .button-icon {
+	.permission-popup-permission-remove-button > .button-box > .button-icon,
+	.remote-tabs-close-button {
 		list-style-image: var(--gnome-icon-window-close-symbolic) !important;
 	}
 	#urlbar-search-mode-indicator-close,
-	#searchmode-switcher-close,
-	button.close::before {
+	button.close::before,
+	.searchmode-switcher-close {
 		background-image: var(--gnome-icon-window-close-symbolic) !important;
 	}
 	@media (prefers-color-scheme: light) {
@@ -555,14 +511,22 @@ button.close::before {
 	#urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
 		list-style-image: var(--gnome-icon-edit-find-symbolic) !important;
 	}
+	#trust-icon-container {
+		&.secure {
+			list-style-image: var(--gnome-icon-shield-safe-symbolic) !important;
+		}
+		&.insecure {
+			list-style-image: var(--gnome-icon-shield-danger-symbolic) !important;
+		}
+	}	
 	.urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box > #tracking-protection-icon {
-		list-style-image: var(--gnome-icon-security-high-symbolic) !important;
+		list-style-image: var(--gnome-icon-shield-full-symbolic) !important;
 	}
 	.urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box[hasException] > #tracking-protection-icon {
-		list-style-image: var(--gnome-icon-security-low-symbolic) !important;
+		list-style-image: var(--gnome-icon-shield-outline-symbolic) !important;
 	}
 	.urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon {
-		list-style-image: var(--gnome-icon-security-high-symbolic) !important;
+		list-style-image: var(--gnome-icon-shield-full-symbolic) !important;
 	}
 	#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
 	#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
@@ -592,6 +556,17 @@ button.close::before {
 	}
 	.urlbar-icon {
 		margin: 2px 0 !important;
+	}
+	
+	#trustpanel-connection-icon, #trustpanel-siteinfo-icon {
+		list-style-image: var(--gnome-icon-channel-insecure-symbolic) !important;
+		
+		#trustpanel-popup:is([connection^="secure"],
+		[connection="extension"],
+		[connection="chrome"],
+		[connection="file"]):not([connection="secure-cert-user-overridden"]) & {
+			list-style-image: var(--gnome-icon-channel-secure-symbolic) !important;
+		}
 	}
 
 	/* Folder icon */
