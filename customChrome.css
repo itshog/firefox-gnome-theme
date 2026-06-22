@@ -14,6 +14,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --gnome-window-background: var(--bg0);
+        --gnome-menu-background: var(--bg1);
         --gnome-window-color: var(--fg);
         --gnome-view-background: var(--bg0);
         --gnome-sidebar-background: var(--bg1);
