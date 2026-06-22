@@ -8,3 +8,14 @@
 	--gnome-popover-radius: var(--gnome-button-radius);
 	--gnome-dialog-radius: 0px;
 }
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--gnome-window-background: #1d2021;
+		--gnome-window-color: #d4be98;
+		--gnome-view-background: #1d2021;
+		--gnome-sidebar-background: #282b2c;
+		--gnome-headerbar-background: #1d2021;
+		--gnome-secondary-sidebar-background: #282b2c;
+	}
+}
