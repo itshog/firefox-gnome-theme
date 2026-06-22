@@ -11,7 +11,7 @@
     --gnome-dialog-radius: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         --gnome-window-background: var(--bg0);
         --gnome-menu-background: var(--bg1);
@@ -20,10 +20,15 @@
         --gnome-sidebar-background: var(--bg1);
         --gnome-headerbar-background: var(--bg0);
         --gnome-secondary-sidebar-background: var(--bg1);
+        --panel-background-color: var(--bg1) !important;
     }
 }
 
 
 .tabbrowser-tab label {
     color: var(--gnome-window-color) !important;
+}
+
+:is(menupopup, panel) {
+  --panel-background-color: var(--panel-background-color) !important;
 }
