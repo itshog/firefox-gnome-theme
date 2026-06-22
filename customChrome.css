@@ -20,6 +20,7 @@
         --gnome-sidebar-background: var(--bg1);
         --gnome-headerbar-background: var(--bg0);
         --gnome-secondary-sidebar-background: var(--bg1);
+        --gnome-accent-bg: var(--accent);
     }
 }
 
