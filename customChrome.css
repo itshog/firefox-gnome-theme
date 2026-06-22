@@ -1,21 +1,28 @@
+@import "colors/colors.css";
+
 * { border-radius: 0 !important; }
 
 :root {
-	--gnome-button-radius: 0px;
-	--gnome-entry-radius: var(--gnome-button-radius);
-	--gnome-card-radius: var(--gnome-button-radius);
-	--gnome-menu-radius: 0px;
-	--gnome-popover-radius: var(--gnome-button-radius);
-	--gnome-dialog-radius: 0px;
+    --gnome-button-radius: 0px;
+    --gnome-entry-radius: var(--gnome-button-radius);
+    --gnome-card-radius: var(--gnome-button-radius);
+    --gnome-menu-radius: 0px;
+    --gnome-popover-radius: var(--gnome-button-radius);
+    --gnome-dialog-radius: 0px;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--gnome-window-background: #1d2021;
-		--gnome-window-color: #d4be98;
-		--gnome-view-background: #1d2021;
-		--gnome-sidebar-background: #282b2c;
-		--gnome-headerbar-background: #1d2021;
-		--gnome-secondary-sidebar-background: #282b2c;
-	}
+    :root {
+        --gnome-window-background: var(--bg0);
+        --gnome-window-color: var(--fg);
+        --gnome-view-background: var(--bg0);
+        --gnome-sidebar-background: var(--bg1);
+        --gnome-headerbar-background: var(--bg0);
+        --gnome-secondary-sidebar-background: var(--bg1);
+    }
+}
+
+
+.tabbrowser-tab label {
+    color: var(--gnome-window-color) !important;
 }
