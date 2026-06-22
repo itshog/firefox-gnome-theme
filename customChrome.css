@@ -20,7 +20,6 @@
         --gnome-sidebar-background: var(--bg1);
         --gnome-headerbar-background: var(--bg0);
         --gnome-secondary-sidebar-background: var(--bg1);
-        --panel-background-color: var(--bg1) !important;
     }
 }
 
@@ -29,6 +28,7 @@
     color: var(--gnome-window-color) !important;
 }
 
-:is(menupopup, panel) {
-  --panel-background-color: var(--panel-background-color) !important;
+menupopup, panel {
+    --panel-background-color: var(--bg1) !important;
+    --panel-border-color: var(--bg1) !important;
 }
