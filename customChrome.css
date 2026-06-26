@@ -3,12 +3,15 @@
 * { border-radius: 0 !important; }
 
 :root {
-    --gnome-button-radius: 0px;
-    --gnome-entry-radius: var(--gnome-button-radius);
-    --gnome-card-radius: var(--gnome-button-radius);
-    --gnome-menu-radius: 0px;
-    --gnome-popover-radius: var(--gnome-button-radius);
-    --gnome-dialog-radius: 0px;
+    --gnome-button-radius: 0px !important;
+    --gnome-entry-radius: var(--gnome-button-radius) !important;
+    --gnome-card-radius: var(--gnome-button-radius) !important;
+    --gnome-menu-radius: var(--gnome-button-radius) !important;
+    --gnome-popover-radius: var(--gnome-button-radius) !important;
+    --gnome-dialog-radius: var(--gnome-button-radius) !important;
+    --gnome-menu-item-radius: var(--gnome-button-radius) !important;
+    --panel-border-radius: var(--gnome-button-radius) !important;
+    --toggle-border-radius: var(--gnome-button-radius) !important;
 }
 
 @media (prefers-color-scheme: dark) {
