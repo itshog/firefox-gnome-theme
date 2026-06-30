@@ -27,7 +27,6 @@
     }
 }
 
-
 .tabbrowser-tab label {
     color: var(--gnome-window-color) !important;
 }
@@ -35,4 +34,17 @@
 menupopup, panel {
     --panel-background-color: var(--bg1) !important;
     --panel-border-color: var(--bg1) !important;
+}
+
+/* menulist > menupopup { */
+/*     color: var(--fg) !important; */
+/*     background: var(--bg1) !important; */
+/* } */
+
+menulist > menupopup menuitem {
+    color: var(--gnome-window-color) !important;
+}
+
+menulist > menupopup menuitem[_moz-menuactive]:not([disabled="true"]) {
+    color: var(--gnome-window-color) !important;
 }
